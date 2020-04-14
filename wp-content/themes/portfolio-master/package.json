@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-master",
+  "version": "1.0.0",
+  "description": "git remote add origin git@github.com:shrinkray/portfolio-master.git",
+  "main": "index.php",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "production": ""
+  },
+  "author": "",
+  "license": "ISC"
+}
