@@ -2,35 +2,23 @@ const pkg = require('./package.json');
 
 module.exports = {
 	// Project Identity
-	appName: 'portfolioMaster', // Unique name of your project
+	appName: 'profileMaster', // Unique name of your project
 	type: 'theme', // Plugin or theme
-	slug: 'portfolio-master', // Plugin or Theme slug, basically the directory name under `wp-content/<themes|plugins>`
+	slug: 'profile-master', // Plugin or Theme slug, basically the directory name under `wp-content/<themes|plugins>`
 	// Used to generate banners on top of compiled stuff
 	bannerConfig: {
-		name: 'portfolioMaster',
+		name: 'profileMaster',
 		author: '',
-		license: 'ISC',
-		link: 'ISC',
+		license: 'UNLICENSED',
+		link: 'UNLICENSED',
 		version: pkg.version,
 		copyrightText:
-			'This software is released under the ISC License\nhttps://opensource.org/licenses/ISC',
+			'This software is released under the UNLICENSED License\nhttps://opensource.org/licenses/UNLICENSED',
 		credit: true,
 	},
 	// Files we need to compile, and where to put
 	files: [
 		// If this has length === 1, then single compiler
-		{
-			name: 'main',
-			entry: {
-				assets: [
-					'./assets/js/main.js',
-					'./assets/main.scss'
-				] // Could be a string
-				// 		main: ['./src/mobile/index.js'], // Or an array of string (string[])
-			},
-			// 	// Extra webpack config to be passed directly
-			webpackConfig: undefined,
-		},
 		// {
 		// 	name: 'mobile',
 		// 	entry: {
@@ -78,23 +66,12 @@ module.exports = {
 	// Won't hurt because we use PHP to automate loading
 	optimizeSplitChunks: true,
 	// Usually PHP and other files to watch and reload when changed
-	watch: [
-		'./lib/**/*.php',
-		'./lib/*.php',
-		'./assets/*.scss',
-		'./assets/**/*.*',
-		'*.php',
-		'./templates/**/'
-	],
+	watch: './inc|includes/**/*.php',
 	// Files that you want to copy to your ultimate theme/plugin package
 	// Supports glob matching from minimatch
 	// @link <https://github.com/isaacs/minimatch#usage>
 	packageFiles: [
-		'lib/**',
-		'page-templates/**',
-		'assets/**',
-		'images/**',
-		'screenshot.png',
+		'inc/**',
 		'vendor/**',
 		'dist/**',
 		'*.php',
